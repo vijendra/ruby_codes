@@ -1,0 +1,15 @@
+<% @results_html.each do |table| %>
+  <table class='table table-striped table-bordered table-hover'>
+     <% table.search('tr').each do |tr| %>
+       <tr>
+         <% tr.search('th').each do |th| %>
+           <th> <%= th.text %> </th>
+         <%end%>
+
+         <% tr.search('td').each do |td| %>
+           <td> <%= td.text %> </td>
+         <%end%>
+       </tr>
+     <%end%>
+  </table>
+<%end%>
